@@ -1,0 +1,87 @@
+<section class="download h-100-content f-col center-x">
+  <div class="row center-y">
+    <div class="col download-content">
+      <div class="row">
+        <div class="col center-x">
+          <h1>Download</h1>
+        </div>
+      </div>
+
+      <div class="row content-table">
+        <div class="col">
+          <div class="row download-table center-x">
+            <div class="col">
+              <div class="row table-row table-header">
+                <div class="col table-cell text-center center">Version</div>
+
+                <div class="col table-cell text-center center">Summary</div>
+
+                <div class="col table-cell text-center center">Release date</div>
+
+                <div class="col table-cell text-center center">Download</div>
+              </div>
+
+              <div class="row table-row">
+                <div class="col version table-cell">Latest</div>
+              </div>
+
+              <div class="row table-row">
+                <div class="col table-cell text-center center">v<?= SIMPL_VERSION ?></div>
+
+                <div class="col table-cell text-center center"><?= SIMPL_SUMMARY ?></div>
+
+                <div class="col table-cell text-center center"><?= SIMPL_RELEASE_DATE ?></div>
+
+                <div class="col table-cell text-center center">
+                  <div class="row center-x">
+                    <div class="col center f-0">
+                      <a href="<?= $this->getObj()->download('src', SIMPL_VERSION, SIMPL_RELEASE_DATE) ?>" title="Download source files">src</a>
+                    </div>
+
+                    <div class="col center f-0">
+                      <a href="<?= $this->getObj()->download('add-ons', SIMPL_VERSION, SIMPL_RELEASE_DATE) ?>" title="Download add-on files">add-ons</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row download-table center-x">
+            <div class="col">
+              <div class="row table-row">
+                <div class="col version table-cell">Older</div>
+              </div>
+
+              <div class="row table-row">
+                <div class="col table-cell text-center center">v1.0.0</div>
+
+                <div class="col table-cell text-center center">Intial release</div>
+
+                <div class="col table-cell text-center center">2023-9-18</div>
+
+                <div class="col table-cell center">
+                  <div class="row center-x">
+                    <div class="col f-0">
+                      <a href="<?= $this->getObj()->download('src', '1.0.0', '2023-9-18') ?>" title="Download source files">src</a>
+                    </div>
+
+                    <div class="col f-0">
+                      <a href="<?= $this->getObj()->download('add-ons', '1.0.0', '2023-9-18') ?>" title="Download add-on files">add-ons</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col center-x">
+          <p>For the full changelog for each version check the README in the Simpl GitHub repository, <a href="https://github.com/IJuanTM/simpl" target="_blank">here</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

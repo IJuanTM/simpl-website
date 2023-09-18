@@ -1,0 +1,8 @@
+section.docs, div.docs-content {
+  display: flex;
+  flex-direction: column;
+}
+
+div.docs-content {
+  row-gap: 2rem;
+}

@@ -1,0 +1,60 @@
+section.download, div.download-content {
+  display: flex;
+  flex-direction: column;
+}
+
+div.download-content {
+  row-gap: 2rem;
+
+  div.content-table > div.col {
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    div.download-table > div.col {
+      max-width: 80rem;
+      border-radius: .25rem;
+      box-shadow: 0 0 .25rem rgb(0 0 0 / .25);
+
+      div.table-row {
+        flex-wrap: nowrap;
+        background-color: $light-1;
+
+        div.table-cell {
+          padding: 1rem;
+          line-height: 1rem;
+
+          @include breakpoint-down(md) {
+            font-size: .875rem;
+            line-height: .875rem;
+          }
+
+          > div.row {
+            gap: 1rem;
+          }
+
+          &.version {
+            font-weight: 600;
+          }
+        }
+
+        &:nth-of-type(odd) {
+          background-color: $light-3;
+        }
+
+        &.table-header {
+          color: #FFF;
+          background-color: $simpl;
+        }
+
+        &:first-child {
+          border-radius: .25rem .25rem 0 0;
+        }
+
+        &:last-child {
+          border-radius: 0 0 .25rem .25rem;
+        }
+      }
+    }
+  }
+}

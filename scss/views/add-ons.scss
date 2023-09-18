@@ -1,0 +1,8 @@
+section.add-ons, div.add-ons-content {
+  display: flex;
+  flex-direction: column;
+}
+
+div.add-ons-content {
+  row-gap: 2rem;
+}

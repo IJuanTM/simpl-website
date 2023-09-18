@@ -1,0 +1,17 @@
+section.home, div.home-header {
+  display: flex;
+  flex-direction: column;
+}
+
+div.home-header {
+  row-gap: 2rem;
+
+  svg {
+    height: auto;
+    max-width: 20rem;
+  }
+
+  p {
+    color: rgb(0 0 0 / .5);
+  }
+}

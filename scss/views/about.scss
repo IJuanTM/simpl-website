@@ -1,0 +1,8 @@
+section.about, div.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+div.about-content {
+  row-gap: 2rem;
+}

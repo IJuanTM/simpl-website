@@ -1,0 +1,7 @@
+main.content {
+  padding: 2rem;
+
+  @include breakpoint-up(md) {
+    padding: 4rem;
+  }
+}
