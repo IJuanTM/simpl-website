@@ -14,9 +14,6 @@ const REDIRECT = 'home';
 const ERROR_AUTO_REDIRECT = true;
 
 // Simpl information
-
 const SIMPL_VERSION = '1.0.0';
-
 const SIMPL_SUMMARY = 'Intial release';
-
 const SIMPL_RELEASE_DATE = '2023-9-18';
