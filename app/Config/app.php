@@ -14,6 +14,6 @@ const REDIRECT = 'home';
 const ERROR_AUTO_REDIRECT = true;
 
 // Simpl information
-const SIMPL_VERSION = '1.0.0';
-const SIMPL_SUMMARY = 'Intial release';
-const SIMPL_RELEASE_DATE = '2023-9-18';
+const SIMPL_VERSION = '1.1.0';
+const SIMPL_SUMMARY = 'PHP 8.3.0 support, remember me functionality, and more!';
+const SIMPL_RELEASE_DATE = '2023-12-20';
