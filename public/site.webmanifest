@@ -1,8 +1,8 @@
 {
   "lang": "en",
   "start_url": "/",
-  "name": "simpl",
-  "short_name": "simpl",
+  "name": "Simpl website",
+  "short_name": "Simpl",
   "description": "An easy-to-use PHP, HTML, CSS, JavaScript and Sass framework!",
   "icons": [
     {
@@ -19,5 +19,5 @@
   "theme_color": "#D01018",
   "background_color": "#FCFCFC",
   "display": "standalone",
-  "orientation": "landscape"
+  "orientation": "portrait-primary"
 }

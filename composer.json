@@ -1,11 +1,11 @@
 {
-  "name": "simpl/simpl",
+  "name": "simpl-website/simpl-website",
   "description": "An easy-to-use PHP, HTML, CSS, JavaScript and Sass framework!",
   "require": {
     "php": "^8.2",
     "ext-pdo": "*",
     "ext-pdo_mysql": "*",
-    "vlucas/phpdotenv": "^v5.5.0"
+    "vlucas/phpdotenv": "^v5.6.0"
   },
   "autoload": {
     "psr-4": {

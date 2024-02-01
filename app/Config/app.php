@@ -1,19 +1,23 @@
 <?php
 // Environment configuration
-const DEV = true;
+define('DEV', $_ENV['DEV']);
 
 // Timezone configuration
-const TIMEZONE = 'Europe/Amsterdam';
+const TIMEZONE = 'UTC'; // https://www.php.net/manual/en/timezones.php
 
 // App configuration
-const APP_NAME = 'Simpl';
-const BASE_URL = 'http://simpl.local';
+define('APP_NAME', $_ENV['APP_NAME']);
+define('APP_VERSION', $_ENV['APP_VERSION']);
+define('APP_URL', $_ENV['APP_URL']);
+
+// Last update
+define('LAST_UPDATE', $_ENV['LAST_UPDATE']);
 
 // Redirect configuration
 const REDIRECT = 'home';
 const ERROR_AUTO_REDIRECT = true;
 
 // Simpl information
-const SIMPL_VERSION = '1.1.1';
-const SIMPL_SUMMARY = 'Quick update to PHP 8.3.1';
-const SIMPL_RELEASE_DATE = '2023-12-20';
+const SIMPL_VERSION = '1.2.0';
+const SIMPL_SUMMARY = 'Changes to URL builder and .htaccess, .env now used for configuration, and a few other minor changes and fixes.';
+const SIMPL_RELEASE_DATE = '2024-01-29';
