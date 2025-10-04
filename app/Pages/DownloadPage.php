@@ -39,7 +39,7 @@ class DownloadPage
         [
             'version' => '1.4.0',
             'date' => '2025-10-04',
-            'notes' => 'Big update with new UI and rewritten core functionalities and improvements to the auth add-on',
+            'notes' => 'Rewritten core controllers and improved the auth add-on, also redesigned the UI',
             'url' => 'simpl_1.4.0_2025-10-04.zip',
             'add-ons-url' => 'simpl_add-ons_1.4.0_2025-10-04.zip'
         ]
