@@ -1,0 +1,73 @@
+<section class="download f-col g-row-3">
+  <div class="row">
+    <div class="col f-col g-row-2">
+      <div class="row">
+        <div class="col center-x">
+          <h1 data-typo="h2">Download</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col f-col g-row-1.5">
+      <div class="row center-x">
+        <div class="download-table f-col g-row-0.5">
+          <div class="row table-container">
+            <div class="col f-col g-row-1.5">
+              <table>
+                <thead>
+                <tr>
+                  <th>Version</th>
+                  <th>Notes</th>
+                  <th>Release Date</th>
+                  <th>Download</th>
+                </tr>
+                </thead>
+
+                <tbody class="latest-release">
+
+                <?php $lastRelease = end($this->pageObj->releases); ?>
+
+                <tr>
+                  <td><?= $lastRelease['version'] ?></td>
+                  <td><?= $lastRelease['notes'] ?></td>
+                  <td><?= $lastRelease['date'] ?></td>
+                  <td class="row g-col-1 g-row-0.5 center-x">
+                    <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $lastRelease['url'] ?>" download>src <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
+                    <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $lastRelease['add-ons-url'] ?>" download>add-ons <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
+                  </td>
+                </tr>
+                </tbody>
+
+                <tbody>
+
+                <?php foreach (array_reverse(array_slice($this->pageObj->releases, 0, -1)) as $release): ?>
+
+                  <tr>
+                    <td><?= $release['version'] ?></td>
+                    <td><?= $release['notes'] ?></td>
+                    <td><?= $release['date'] ?></td>
+                    <td class="row g-col-1 g-row-0.5 center-x">
+                      <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $release['url'] ?>" download>src <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
+                      <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $release['add-ons-url'] ?>" download>add-ons <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
+                    </td>
+                  </tr>
+
+                <?php endforeach ?>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col center-x">
+          <p>Check out the source code on <a class="link" href="https://github.com/IJuanTM/simpl/" target="_blank" aria-label="Link to the Simpl GitHub repository">GitHub <i class="fab fa-github" aria-hidden="true"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

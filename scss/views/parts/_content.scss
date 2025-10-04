@@ -1,0 +1,12 @@
+@use "../../config/abstracts/mixins" as *;
+@use "../../config/vars/sizes" as *;
+
+main.content {
+  min-height: $content-height;
+  padding: $content-padding-row $content-padding-col;
+
+  @include breakpoint-down(md) {
+    min-height: calc($content-height + 2rem);
+    padding: calc($content-padding-row - 1rem) calc($content-padding-col - 2rem);
+  }
+}

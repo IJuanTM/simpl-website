@@ -1,0 +1,14 @@
+@use "../config/abstracts/mixins" as *;
+@use "../config/vars/colors" as *;
+
+section.download {
+  div.download-table {
+    @include breakpoint-up(sm) {
+      max-width: 96rem !important;
+    }
+
+    tbody.latest-release {
+      @include shimmer(false, rgba($simpl, .5));
+    }
+  }
+}
