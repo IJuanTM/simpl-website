@@ -1,13 +1,11 @@
 @use "../config/vars/colors" as *;
 
 section.home {
-  padding-bottom: 4rem;
-
   div.logo {
     padding: 0 2rem;
 
     > svg {
-      height: 24rem;
+      height: 20rem;
     }
   }
 }
