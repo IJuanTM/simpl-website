@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://simpl.local/sitemap.xml
+Sitemap: http://simpl-website.local/sitemap.xml
