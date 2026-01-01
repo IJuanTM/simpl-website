@@ -10,62 +10,100 @@
   </div>
 
   <div class="row">
-    <div class="col f-col g-row-1.5">
-      <div class="row center-x">
-        <div class="download-table f-col g-row-0.5">
-          <div class="row table-container">
-            <div class="col f-col g-row-1.5">
-              <table>
-                <thead>
-                <tr>
-                  <th>Version</th>
-                  <th>Notes</th>
-                  <th>Release Date</th>
-                  <th>Download</th>
-                </tr>
-                </thead>
+    <div class="col f-col g-row-4.5">
+      <div class="row">
+        <div class="col f-col g-row-1.5">
+          <div class="row">
+            <div class="col center-x">
+              <p>Get started with Simpl by using the command below to create a new project. Make sure you have <a class="link underline" href="https://nodejs.org/" target="_blank" aria-label="Link to the Node.js website">Node.js</a> installed on your machine.</p>
+            </div>
+          </div>
 
-                <tbody class="latest-release">
-
-                <?php $lastRelease = end($this->pageObj->releases); ?>
-
-                <tr>
-                  <td><?= $lastRelease['version'] ?></td>
-                  <td><?= $lastRelease['notes'] ?></td>
-                  <td><?= $lastRelease['date'] ?></td>
-                  <td class="row g-col-1 g-row-0.5 center-x">
-                    <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $lastRelease['url'] ?>" download>src <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
-                    <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $lastRelease['add-ons-url'] ?>" download>add-ons <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
-                  </td>
-                </tr>
-                </tbody>
-
-                <tbody>
-
-                <?php foreach (array_reverse(array_slice($this->pageObj->releases, 0, -1)) as $release): ?>
-
-                  <tr>
-                    <td><?= $release['version'] ?></td>
-                    <td><?= $release['notes'] ?></td>
-                    <td><?= $release['date'] ?></td>
-                    <td class="row g-col-1 g-row-0.5 center-x">
-                      <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $release['url'] ?>" download>src <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
-                      <a class="link" href="downloads/<?= $lastRelease['version'] ?>/<?= $release['add-ons-url'] ?>" download>add-ons <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
-                    </td>
-                  </tr>
-
-                <?php endforeach ?>
-
-                </tbody>
-              </table>
+          <div class="row center-x">
+            <div class="col code-block f-row g-col-1 center-y f-0">
+              <i class="fa fa-terminal"></i>
+              <code><span class="command-name">npx</span> <span class="command-argument">@ijuantm/simpl-addon</span> <span class="command-arguments">[project-name] [version]</span></code>
+              <span class="copy-code" title="Click to copy command to clipboard"><i class="fa fa-copy" aria-label="Copy to clipboard"></i></span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col center-x">
-          <p>Check out the source code on <a class="link" href="https://github.com/IJuanTM/simpl/" target="_blank" aria-label="Link to the Simpl GitHub repository">GitHub <i class="fab fa-github" aria-hidden="true"></i></a></p>
+        <div class="col f-col g-row-1.5">
+          <div class="row">
+            <div class="col center-x">
+              <p class="text-muted">Alternatively, you can download the source code of the latest and previous releases directly from the table below.</p>
+            </div>
+          </div>
+
+          <div class="row center-x">
+            <div class="download-table f-col g-row-0.5">
+              <div class="row table-container">
+                <div class="col f-col g-row-1.5">
+                  <table>
+                    <thead>
+                    <tr>
+                      <th>Version</th>
+                      <th>Notes</th>
+                      <th>Release Date</th>
+                      <th>Download</th>
+                    </tr>
+                    </thead>
+
+                    <tbody class="latest-release">
+
+                    <?php $lastRelease = end($this->pageObj->releases); ?>
+
+                    <tr>
+                      <td><?= $lastRelease['version'] ?></td>
+                      <td><?= $lastRelease['notes'] ?></td>
+                      <td><?= $lastRelease['date'] ?></td>
+                      <td class="row g-col-1 g-row-0.5">
+
+                        <?php if ($lastRelease['has_download']): ?>
+                          <a class="link" href="https://cdn.simpl.iwanvanderwal.nl/framework/<?= $lastRelease['version'] ?>/simpl-<?= $lastRelease['version'] ?>.zip" download>Download <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
+                        <?php else : ?>
+                          <span class="text-muted">No download <i class="fa fa-circle-exclamation" aria-hidden="true"></i></span>
+                        <?php endif ?>
+
+                      </td>
+                    </tr>
+                    </tbody>
+
+                    <tbody>
+
+                    <?php foreach (array_reverse(array_slice($this->pageObj->releases, 0, -1)) as $release): ?>
+
+                      <tr>
+                        <td><?= $release['version'] ?></td>
+                        <td><?= $release['notes'] ?></td>
+                        <td><?= $release['date'] ?></td>
+                        <td class="row g-col-1 g-row-0.5">
+
+                          <?php if ($release['has_download']): ?>
+                            <a class="link" href="https://cdn.simpl.iwanvanderwal.nl/framework/<?= $release['version'] ?>/simpl-<?= $release['version'] ?>.zip" download>Download <i class="fa fa-file-arrow-down" aria-hidden="true"></i></a>
+                          <?php else : ?>
+                            <span class="text-muted">No download <i class="fa fa-circle-exclamation" aria-hidden="true"></i></span>
+                          <?php endif ?>
+
+                        </td>
+                      </tr>
+
+                    <?php endforeach ?>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col center-x">
+              <p>Check out the source code on <a class="link underline" href="https://github.com/IJuanTM/simpl/" target="_blank" aria-label="Link to the Simpl GitHub repository">GitHub <i class="fab fa-github" aria-hidden="true"></i></a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

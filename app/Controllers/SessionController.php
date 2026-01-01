@@ -4,12 +4,16 @@ namespace app\Controllers;
 
 /**
  * The SessionController class is the controller for accessing session variables.
- * It contains methods for setting, getting, checking and removing session variables.
+ * It contains methods for setting, getting, checking, and removing session variables.
  */
 class SessionController
 {
     public function __construct()
     {
+        // Set session lifetime
+        ini_set('session.gc_maxlifetime', 86400 * SESSION_LIFETIME);
+        session_set_cookie_params(86400 * SESSION_LIFETIME);
+
         // Start the session
         session_start();
     }

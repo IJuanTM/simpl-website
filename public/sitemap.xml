@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/">
   <url>
-    <loc>http://simpl-website.local/</loc>
-    <lastmod>2025-10-04</lastmod>
+    <loc>https://simpl.iwanvanderwal.nl/</loc>
+    <lastmod>2026-01-02</lastmod>
   </url>
   <url>
-    <loc>http://simpl-website.local/home/</loc>
-    <lastmod>2025-10-04</lastmod>
+    <loc>https://simpl.iwanvanderwal.nl/home/</loc>
+    <lastmod>2026-01-02</lastmod>
+  </url>
+  <url>
+    <loc>https://simpl.iwanvanderwal.nl/getting-started/</loc>
+    <lastmod>2026-01-02</lastmod>
+  </url>
+  <url>
+    <loc>https://simpl.iwanvanderwal.nl/download/</loc>
+    <lastmod>2026-01-02</lastmod>
+  </url>
+  <url>
+    <loc>https://simpl.iwanvanderwal.nl/docs/</loc>
+    <lastmod>2026-01-02</lastmod>
   </url>
 </urlset>

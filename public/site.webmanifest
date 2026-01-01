@@ -1,9 +1,9 @@
 {
   "lang": "en",
   "start_url": "/",
-  "name": "simpl website",
-  "short_name": "simpl",
-  "description": "An easy-to-use PHP, HTML, Sass and TypeScript framework!",
+  "name": "Simpl website",
+  "short_name": "Simpl",
+  "description": "The website for the Simpl PHP framework.",
   "icons": [
     {
       "src": "android-chrome-192x192.png",
