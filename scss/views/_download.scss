@@ -7,8 +7,31 @@ section.download {
       max-width: 96rem !important;
     }
 
-    tbody.latest-release {
-      @include shimmer(false, rgba($simpl, .5));
+    tbody {
+      position: relative;
+
+      &.latest-release {
+        @include shimmer(false, rgba($simpl, .5));
+      }
+
+      &.collapsed::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 4rem;
+        content: "";
+        pointer-events: none;
+        background: linear-gradient(to bottom, transparent, var(--table-row-odd));
+      }
+    }
+
+    button.table-toggle {
+      cursor: pointer;
+
+      @include hover-focus {
+        color: var(--text-75);
+      }
     }
   }
 }

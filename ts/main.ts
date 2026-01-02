@@ -3,6 +3,7 @@ import {cookieModule} from './features/cookie.ts';
 import {themeModule} from './features/theme.ts';
 import {timeoutModule} from './features/timeout.ts';
 import {codeModule} from "./features/code.ts";
+import {tableModule} from "./features/table.ts";
 
 // Import external stylesheets for Vite to bundle them, local stylesheets are handled by sass
 import "the-new-css-reset/css/reset.css";
@@ -23,4 +24,5 @@ window.addEventListener('load', () => {
   menuModule.setTabIndex();
   timeoutModule.onLoad();
   codeModule.onLoad();
+  tableModule.init();
 });
