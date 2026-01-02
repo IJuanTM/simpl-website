@@ -9,10 +9,18 @@ div.table-container {
     table {
       width: 100%;
 
+      thead {
+        border-bottom: .125rem solid var(--border-muted);
+      }
+
       th, td {
         position: relative;
-        padding: .625rem .5rem;
+        padding: .625rem .75rem;
         vertical-align: middle;
+      }
+
+      th:not(:last-child), td:not(:last-child) {
+        border-right: .0625rem solid var(--border-muted);
       }
 
       th {
